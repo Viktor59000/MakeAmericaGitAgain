@@ -1,0 +1,111 @@
+body {
+    background-color: #00247d;
+    color: #cf142b;
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    text-align: center;
+    /* Clashing Plaid Pattern */
+    background-image:
+        repeating-linear-gradient(45deg, rgba(207, 20, 43, 0.5) 0, rgba(207, 20, 43, 0.5) 20px, transparent 20px, transparent 40px),
+        repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0.5) 20px, transparent 20px, transparent 40px);
+    background-size: 100px 100px;
+}
+
+.container {
+    background: url('https://www.transparenttextures.com/patterns/old-map.png'), #ffffcc;
+    /* Fake texture */
+    color: blue;
+    width: 90%;
+    margin: 10px auto;
+    border: 20px ridge gold;
+    padding: 10px;
+}
+
+.main-title {
+    font-family: "Old English Text MT", serif;
+    font-size: 5rem;
+    color: red;
+    text-shadow: 5px 5px 0px blue, 10px 10px 0px white;
+    animation: wobble 2s infinite;
+}
+
+@keyframes wobble {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.subtitle {
+    font-size: 2rem;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: 5px dotted red;
+}
+
+.blink {
+    animation: blinker 0.2s linear infinite;
+    color: magenta;
+    font-weight: bold;
+    font-size: 3rem;
+    background: yellow;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+button#tea-btn {
+    background: radial-gradient(circle, red, blue);
+    color: yellow;
+    padding: 20px 50px;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 2rem;
+    border: 10px outset gold;
+    cursor: help;
+}
+
+.marquee-container {
+    background: blue;
+    color: yellow;
+    font-family: "Courier New", monospace;
+    font-size: 2rem;
+    border: 5px solid red;
+}
+
+table {
+    border: 10px solid red;
+    background-color: cyan;
+    color: black;
+    font-family: "Impact", sans-serif;
+}
+
+td {
+    border: 5px solid blue;
+}
+
+a {
+    color: red;
+    background-color: yellow;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+a:hover {
+    background-color: red;
+    color: yellow;
+    text-decoration: blink;
+}

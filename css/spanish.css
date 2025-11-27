@@ -1,0 +1,99 @@
+body {
+    background-color: #FFFF00;
+    color: #FF0000;
+    font-family: "Papyrus", "Comic Sans MS", cursive;
+    text-align: center;
+    /* Polka Dots */
+    background-image: radial-gradient(#FF0000 15%, transparent 16%),
+        radial-gradient(#FF0000 15%, transparent 16%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+}
+
+.container {
+    background: lime;
+    /* Clashing green */
+    color: blue;
+    width: 85%;
+    margin: 20px auto;
+    border: 15px dashed orange;
+    padding: 20px;
+    transform: rotate(-2deg);
+}
+
+.main-title {
+    font-size: 6rem;
+    color: red;
+    text-shadow: 4px 4px yellow, 8px 8px black;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.subtitle {
+    font-size: 3rem;
+    color: yellow;
+    background: red;
+    padding: 10px;
+    border-radius: 50px;
+    border: 5px solid yellow;
+}
+
+.blink {
+    animation: blinker 0.3s steps(2, start) infinite;
+    color: yellow;
+    background: blue;
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding: 10px;
+}
+
+@keyframes blinker {
+    50% {
+        visibility: hidden;
+    }
+}
+
+button#fiesta-btn {
+    background: linear-gradient(to right, red, yellow, red);
+    color: black;
+    padding: 30px 60px;
+    font-size: 3rem;
+    border: 10px groove blue;
+    cursor: pointer;
+    font-family: "Papyrus", cursive;
+    font-weight: bold;
+}
+
+.marquee-container {
+    background: red;
+    color: yellow;
+    font-size: 2.5rem;
+    border: 10px double yellow;
+}
+
+table {
+    border: 10px inset purple;
+    background-color: pink;
+    font-size: 1.5rem;
+}
+
+a {
+    color: blue;
+    background-color: white;
+    font-weight: bold;
+}
+
+a:hover {
+    font-size: 2rem;
+}

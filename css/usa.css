@@ -1,0 +1,176 @@
+:root {
+    --navy: #002868;
+    --white: #FFFFFF;
+    --red: #BF0A30;
+    --gold: #FFD700;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Impact", "Arial Black", sans-serif;
+    /* Stars background */
+    background-color: var(--navy);
+    background-image:
+        radial-gradient(white 15%, transparent 16%),
+        radial-gradient(white 15%, transparent 16%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 85%;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.9);
+    border: 15px ridge var(--gold);
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+.main-title {
+    font-size: 6rem;
+    color: var(--navy);
+    text-shadow:
+        4px 4px 0px var(--white),
+        8px 8px 0px var(--red);
+    margin: 0;
+    text-transform: uppercase;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.subtitle {
+    font-size: 2.5rem;
+    color: var(--red);
+    font-family: "Comic Sans MS", cursive;
+    background-color: var(--white);
+    display: inline-block;
+    padding: 15px;
+    border: 5px dashed var(--navy);
+    transform: rotate(-2deg);
+}
+
+.marquee-container {
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 2rem;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-bottom: 5px solid var(--white);
+    font-weight: bold;
+}
+
+.blink {
+    animation: blinker 0.5s linear infinite;
+    color: red;
+    font-weight: bold;
+    font-size: 2rem;
+    background: yellow;
+    display: inline-block;
+    padding: 5px;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+button#freedom-btn {
+    background: linear-gradient(to bottom, var(--navy), blue);
+    color: var(--white);
+    border: 5px outset var(--gold);
+    padding: 25px 50px;
+    font-size: 2.5rem;
+    font-family: "Impact", sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 0px var(--red);
+    transition: all 0.1s;
+}
+
+button#freedom-btn:active {
+    transform: translate(5px, 5px);
+    box-shadow: 5px 5px 0px var(--red);
+}
+
+.visitor-counter {
+    font-family: "Courier New", monospace;
+    background: black;
+    color: var(--gold);
+    padding: 5px 15px;
+    border: 5px inset gray;
+    font-size: 2rem;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+table {
+    margin-top: 20px;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 1.2rem;
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:hover {
+    background-color: yellow;
+}
+
+/* Falling Elements */
+#falling-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.falling-item {
+    position: absolute;
+    top: -50px;
+    font-size: 4rem;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+/* Cursor Trail */
+.trail {
+    position: absolute;
+    pointer-events: none;
+    font-size: 25px;
+    animation: fadeOut 0.8s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
