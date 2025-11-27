@@ -1,0 +1,109 @@
+body {
+    background-color: #006600;
+    color: #FFFF00;
+    font-family: "Papyrus", "Comic Sans MS", cursive;
+    text-align: center;
+    /* Aggressive Flag Stripes */
+    background-image: repeating-linear-gradient(90deg, #006600 0, #006600 40%, #FF0000 40%, #FF0000 100%);
+    background-size: 100% 100%;
+}
+
+.container {
+    background: url('https://www.transparenttextures.com/patterns/azulejos.png'), #FFFFFF;
+    /* Fake Azulejos */
+    color: #FF0000;
+    width: 90%;
+    margin: 10px auto;
+    border: 25px ridge #FFFF00;
+    padding: 10px;
+    transform: skew(-5deg);
+}
+
+.main-title {
+    font-size: 6rem;
+    color: #FF0000;
+    text-shadow: 5px 5px #006600, 10px 10px #FFFF00;
+    animation: spin 3s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.subtitle {
+    font-size: 3rem;
+    color: #006600;
+    background: #FFFF00;
+    border: 10px dashed #FF0000;
+    padding: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.blink {
+    animation: blinker 0.2s linear infinite;
+    color: #FFFF00;
+    background: #FF0000;
+    font-weight: bold;
+    font-size: 3rem;
+    padding: 10px;
+    border: 5px solid #006600;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+button#galo-btn {
+    background: radial-gradient(circle, #FF0000, #006600);
+    color: #FFFF00;
+    padding: 30px 60px;
+    font-size: 3rem;
+    border: 15px outset #FFFF00;
+    cursor: wait;
+    font-family: "Impact", sans-serif;
+    text-transform: uppercase;
+}
+
+button#galo-btn:hover {
+    background: #FFFF00;
+    color: #FF0000;
+    transform: scale(1.5);
+}
+
+.marquee-container {
+    background: #FFFF00;
+    color: #FF0000;
+    font-size: 3rem;
+    border: 10px solid #006600;
+    font-family: "Comic Sans MS", cursive;
+}
+
+table {
+    background: #006600;
+    color: #FFFF00;
+    border: 10px groove #FF0000;
+    font-size: 1.5rem;
+}
+
+a {
+    color: #FFFF00;
+    text-decoration: blink;
+    background: #FF0000;
+}

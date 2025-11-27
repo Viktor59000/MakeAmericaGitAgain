@@ -1,0 +1,115 @@
+body {
+    background-color: #000000;
+    color: #FFFF00;
+    font-family: "Impact", "Arial Black", sans-serif;
+    text-align: center;
+    /* Hazard Stripes */
+    background-image: repeating-linear-gradient(45deg, #000000, #000000 10px, #FFFF00 10px, #FFFF00 20px);
+    background-size: 50px 50px;
+}
+
+.container {
+    background: #333333;
+    color: #FF0000;
+    width: 85%;
+    margin: 20px auto;
+    border: 20px solid #FF0000;
+    padding: 20px;
+    box-shadow: 0 0 50px #FFFF00;
+}
+
+.main-title {
+    font-size: 8rem;
+    color: #FFFF00;
+    text-shadow: 10px 10px #FF0000;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    animation: flash 0.5s infinite;
+}
+
+@keyframes flash {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.subtitle {
+    font-size: 4rem;
+    color: #000000;
+    background: #FF0000;
+    border: 10px solid #FFFF00;
+    padding: 20px;
+    display: inline-block;
+    transform: rotate(5deg);
+    font-weight: bold;
+}
+
+.blink {
+    animation: blinker 0.1s steps(1) infinite;
+    color: #FF0000;
+    background: #FFFF00;
+    font-weight: bold;
+    font-size: 4rem;
+    padding: 20px;
+    border: 10px dashed #000000;
+}
+
+@keyframes blinker {
+    50% {
+        background: #000000;
+        color: #FFFF00;
+    }
+}
+
+button#beer-btn {
+    background: #FF0000;
+    color: #FFFF00;
+    padding: 40px 80px;
+    font-size: 4rem;
+    border: 20px ridge #000000;
+    cursor: pointer;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button#beer-btn:hover {
+    background: #FFFF00;
+    color: #000000;
+    transform: scale(1.2);
+}
+
+.marquee-container {
+    background: #000000;
+    color: #FF0000;
+    font-size: 4rem;
+    border: 10px solid #FFFF00;
+    font-weight: bold;
+    font-family: "Impact", sans-serif;
+}
+
+table {
+    background: #999999;
+    border: 20px solid #000000;
+    font-size: 2rem;
+    color: #000000;
+    font-weight: bold;
+}
+
+a {
+    color: #FF0000;
+    text-decoration: none;
+    background: #000000;
+    padding: 5px;
+}
+
+a:hover {
+    background: #FFFF00;
+    color: #000000;
+}
