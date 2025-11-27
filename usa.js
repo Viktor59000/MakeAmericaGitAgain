@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Annoying welcome message
-    // setTimeout(() => alert("Bienvenue sur mon Super Site Web !!!"), 500);
+    // setTimeout(() => alert("WELCOME TO THE LAND OF THE FREE !!!"), 500);
 
     const container = document.getElementById('falling-container');
-    const button = document.getElementById('honhonhon-btn');
+    const button = document.getElementById('freedom-btn');
 
-    // List of French clichés (emojis)
-    const cliches = ['🥖', '🥐', '🍷', '🧀', '🗼', '🎨', '🚲', '🐩', '🇫🇷', '🐓', '👨‍🎨'];
+    // List of USA clichés (emojis)
+    const cliches = ['🍔', '🌭', '🦅', '🇺🇸', '🗽', '🏈', '⚾', '🤠', '💸', '🔫', '🥤'];
 
     function createFallingItem() {
         const item = document.createElement('div');
@@ -28,12 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }, duration * 1000);
     }
 
-    // Create a falling item every 500ms
-    setInterval(createFallingItem, 500);
+    // Create a falling item every 400ms
+    setInterval(createFallingItem, 400);
 
     // Button interaction
     button.addEventListener('click', () => {
-        alert("Ouh là là ! C'est magnifique ! Sacrebleu !");
+        alert("CAW CAW !!! FREEDOM !!! 🦅🦅🦅");
         // Burst of items
         for (let i = 0; i < 50; i++) {
             setTimeout(createFallingItem, i * 20);
@@ -44,13 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mousemove', (e) => {
         const trail = document.createElement('div');
         trail.classList.add('trail');
-        trail.innerText = '🥖';
+        trail.innerText = '🦅';
         trail.style.left = `${e.pageX}px`;
         trail.style.top = `${e.pageY}px`;
         document.body.appendChild(trail);
 
         setTimeout(() => {
             trail.remove();
-        }, 1000);
+        }, 800);
     });
 });
